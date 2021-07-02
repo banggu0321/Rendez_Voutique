@@ -1,0 +1,355 @@
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 애니메이션 */
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 상단 메뉴 */
+
+.header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 68px;
+    position: relative;
+    z-index: 999;
+}
+
+.b_header{
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    height: 68px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 999;
+}
+
+.menubar{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    min-width: 480px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 0 0px;
+    margin: 5px 0px;
+    background-color: white;
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin: 0 3px;
+}
+
+
+.menu{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+    z-index: 999;
+}
+
+.menulink{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    min-width: 100px;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.menulink li{
+    display: inline-block;
+    position: relative;
+    padding: 0px 0px;
+    margin : 0px 5px;
+}
+
+.menu_name{
+    width: 90px;
+    align-items: center;
+    text-align: center;
+    line-height: 18px;
+}
+
+.menu_name a{
+    color: #FF8888;
+}
+
+.menu_name a:hover{
+    color: #FFCCCC;
+    transition: color 0.1s linear;
+}
+
+.menu_name h4{
+    margin: 3px;
+}
+.menu_name h6{
+    margin: 3px;
+}
+
+
+/* 드롭다운 */
+
+.menulink >li{
+    display: inline-block;
+    position: relative;
+}
+.menulink > li > ul{
+    font-size: 15px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    margin: 13px 0px;
+}
+.menulink:hover{overflow: visible;}
+.menulink > li > ul > li{
+    display: block;
+    line-height: 40px;
+}
+.menulink > li > ul > li > a{
+    color: white;
+    transition: color 0.3s;
+}
+.menulink > li > ul > li > a:hover{
+    color: #FF8888;
+}
+.menulink:hover +div+.b_menu{display: block;}
+.b_menu{
+    display: none;
+    background-color: #FFCCCC;
+    width: 100%;
+    height: 330px;
+    position: absolute;
+    z-index: 900;
+    margin: 0px;
+}
+
+
+/*우측상단아이콘*/
+
+.icons{
+    display: flex;
+    font-size: 30px;
+    float: right;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0 3px;
+}
+
+.icons li{
+    padding: 5px 10px;
+}
+
+.icons li a{
+    color: #FF8888;
+}
+
+
+
+/*현재 페이지*/
+.currentpage{
+    display: inline-flex;
+    background-color: #FF8888;
+    width: 100%;
+    height: 60px;
+}
+
+.currentpage > p{
+    margin-left: 50px;
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    color: white;
+}
+
+.currentpage > h5{
+    font-family: 'GmarketSansMedium';
+    font-weight: lighter;
+    color: white;
+}
+
+/* 음료 정보 */
+#content_box { width:1080px;
+            margin: 0 auto;
+            padding-top:50px;
+               padding-left: 50px;
+         }
+.photo { float:left;
+       font-weight: 30px 0 0 20px;
+       list-style: none;}
+
+.image { 
+         position: relative;
+        }
+
+.photo .a { font-size: 15px;
+            font-weight: bold;
+          text-align:center;
+          margin-top: 30px;
+            }
+
+.image .image_img {
+    display: block;
+    width: 307px;
+    height: 307px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 307px;
+    height: 307px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+@media screen and (max-width:1200px) {
+    #content_box { width:700px;
+            margin: 0 auto;
+            padding-top:50px;
+               padding-left: 50px;
+         }
+}
+
+@media screen and (max-width:800px) {
+    #content_box { width:500px;
+            margin: 0 auto;
+            padding-top:50px;
+               padding-left: 50px;
+         }
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    background-color: #FF8888;
+}
+.footer > div{
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+.footer > div > p{
+    font-size: 13px;
+    color: white;
+}

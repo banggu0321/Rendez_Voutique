@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>랑데부띠끄</title>
+  <script src="https://kit.fontawesome.com/439a5d63a2.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</head>
+ <body>
+  <style>
+   [name="slide"] {display:none;}
+   [id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0); animation:slide01 20s infinite;}
+   [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100); animation:slide02 20s infinite;}
+   [id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200); animation:slide03 20s infinite;}
+   [id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300); animation:slide04 20s infinite;}
+
+   @keyframes slide01 {  0%   {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:-200%;}
+                   73%  {left:-200%;}
+                   75%  {left:-300%;}
+                   98%  {left:-300%;}
+                   100% {left:0%;} }
+
+   @keyframes slide02 {  0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:-200%;}
+                   73%  {left:-200%;}
+                   75%  {left:1000%;}
+                   98%  {left:1000%;}
+                   100% {left:0%;} }
+
+  @keyframes slide03 {    0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:200%;}
+                   73%  {left:200%;}
+                   75%  {left:100%;}
+                   98%  {left:100%;}
+                   100% {left:0%;} }
+
+  @keyframes slide04 {    0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:300%;}
+                   48%  {left:300%;}
+                   50%  {left:200%;}
+                   73%  {left:200%;}
+                   75%  {left:100%;}
+                   98%  {left:100%;}
+                   100% {left:0%;} }
+
+.slidebox {max-width:1920px; width:100%; margin:0 auto;}
+  .slidebox img { max-width:1200px;}
+
+  .slidebox .slidelist {  white-space:nowrap;
+                    font-size:0;
+                    overflow:hidden; }
+
+  .slidebox .slideitem {  position:relative;
+                    display:inline-block;
+                    vertical-align:middle;
+                    width:100%;
+                    text-align:center;
+                    transition:all .0.2s; }
+
+  .slidebox .slideitem label { position:absolute;
+                    z-index: 1;
+                    top:50%;
+                    transform:translateY(-50%);
+                    padding:20px;
+                    border-radius:50%;
+                    cursor:pointer;}
+  label.left {   left:20px;
+           background-color:none;
+           background-image:url('./img/left-arrow.png');
+           background-position:center center;
+           background-size:50%;
+           background-repeat:no-repeat; }
+  label.right { right:20px;
+            background-color:none;
+            background-image:url('./img/left-arrow.png');
+            background-position:center center;
+            background-size:50%;
+            background-repeat:no-repeat; }
+
+
+   [name="slide2"] {display:none;}
+   [id="slide011"]:checked ~ .slidelist2 .slideitem2 {transform:translateX(0); animation:slide011 20s infinite;}
+   [id="slide022"]:checked ~ .slidelist2 .slideitem2 {transform:translateX(-100); animation:slide022 20s infinite;}
+   [id="slide033"]:checked ~ .slidelist2 .slideitem2 {transform:translateX(-200); animation:slide033 20s infinite;}
+   [id="slide042"]:checked ~ .slidelist2 .slideitem2 {transform:translateX(-300); animation:slide044 20s infinite;}
+
+   @keyframes slide011 {  0%   {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:-200%;}
+                   73%  {left:-200%;}
+                   75%  {left:-300%;}
+                   98%  {left:-300%;}
+                   100% {left:0%;} }
+
+   @keyframes slide022 {  0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:-200%;}
+                   73%  {left:-200%;}
+                   75%  {left:1000%;}
+                   98%  {left:1000%;}
+                   100% {left:0%;} }
+
+  @keyframes slide033 {    0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:-100%;}
+                   48%  {left:-100%;}
+                   50%  {left:200%;}
+                   73%  {left:200%;}
+                   75%  {left:100%;}
+                   98%  {left:100%;}
+                   100% {left:0%;} }
+
+  @keyframes slide044 {    0%  {left:0%;}
+                   23%  {left:0%;}
+                   25%  {left:300%;}
+                   48%  {left:300%;}
+                   50%  {left:200%;}
+                   73%  {left:200%;}
+                   75%  {left:100%;}
+                   98%  {left:100%;}
+                   100% {left:0%;} }
+
+  .slidebox2 {max-width:1920px; width:100%; margin:0 auto;}
+  .slidebox2 img { max-width:1200px;
+               margin-top:50px;}
+  .slidebox2 .slidelist2 {  white-space:nowrap;
+                     font-size:0;
+                     overflow:hidden; }
+
+  .slidebox2 .slideitem2 {  position:relative;
+                     display:inline-block;
+                     vertical-align:middle;
+                     width:100%;
+                     text-align:center;
+                     transition:all .0.2s; }
+
+  .slidebox2 .slideitem2 label { position:absolute;
+                         z-index: 1;
+                         top:50%;
+                         transform:translateY(-50%);
+                         padding:20px;
+                         border-radius:50%;
+                         cursor:pointer;}
+  label.left {   left:20px;
+            background-color:none;
+            background-image:url('./img/left-arrow.png');
+            background-position:center center;
+            background-size:50%;
+            background-repeat:no-repeat; }
+
+  label.right { right:20px;
+            background-color:none;
+            background-image:url('./img/left-arrow.png');
+            background-position:center center;
+            background-size:50%;
+            background-repeat:no-repeat; }
+    </style>
+     <nav class="header">
+         <div class="b_header">
+             <div class="menubar">
+                 <div class="logo">
+                    <a href="./index.html"><img src="./imgs/logo.png" alt=""></a>
+                 </div>
+
+                 <div class='menu'>
+                     <ul class="menulink">
+                         <li><div class="menu_name"><a href="./coffee.html"><h4>메뉴</h4><h6>MENU</h6></a></div>
+                             <ul class="s_menu">
+                            <li><a href="./coffee.html">커피</a></li>
+                             <li><a href="./juice.html">음료</a></li>
+                           <li><a href="./dessert.html">디저트</a></li>
+                           </ul>
+                          </li>
+                           <li><div class="menu_name"><a href="./news.html"><h4>소식</h4><h6>NEWS&EVENT</h6></a></div>
+                          <ul class="s_news">
+                              <li><a href="./news.html">새소식</a></li>
+                              <li><a href="./event.html">이벤트</a></li>
+                          </ul>
+                         </li>
+                         <li><div class="menu_name"><a href="./store.html"><h4>매장</h4><h6>STORE</h6></a></div>
+                             <ul class="s_store">
+                               <li><a href="./store.html">매장안내</a></li>
+                                </ul>
+                          </li>
+                           <li><div class="menu_name"><a href="./brand.html"><h4>브랜드</h4><h6>BRAND</h6></a></div>
+                               <ul class="s_brand">
+                                 <li><a href="./brand.html">브랜드 소개</a></li>
+                               </ul>
+                          </li>
+                     </ul>
+                 </div>
+                 <ul class="icons">
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="b_menu"></div>
+     </nav><br><br>
+
+    <div class="slidebox">
+      <input type="radio" name="slide" id="slide01" checked>
+      <input type="radio" name="slide" id="slide02">
+      <input type="radio" name="slide" id="slide03">
+      <input type="radio" name="slide" id="slide04">
+
+      <ul class="slidelist">
+       <li class="slideitem">
+        <div>
+         <label for="slide04" class="left"></label>
+           <label for="slide02" class="right"></label>
+           <a><img src="./imgs/banner.png"></a>
+        </div>
+       </li>
+       <li class="slideitem">
+        <div>
+         <label for="slide01" class="left"></label>
+         <label for="slide03" class="right"></label>
+         <a><img src="./imgs/event1.png"></a>
+        </div>
+          </li>
+          <li class="slideitem">
+           <div>
+            <label for="slide02" class="left"></label>
+            <label for="slide04" class="right"></label>
+            <a><img src="./imgs/event2.jpg"></a>
+         </div>
+        </li>
+        <li class="slideitem">
+           <div>
+            <label for="slide03" class="left"></label>
+            <label for="slide01" class="right"></label>
+            <a><img src="./imgs/june_banner.jpg"></a>
+         </div>
+          </li>
+         </ul>
+        </div>
+          <div class="slidebox2">
+      <input type="radio" name="slide2" id="slide011" checked>
+      <input type="radio" name="slide2" id="slide022">
+      <input type="radio" name="slide2" id="slide033">
+      <input type="radio" name="slide2" id="slide044">
+
+      <ul class="slidelist2">
+       <li class="slideitem2">
+        <div>
+         <label for="slide044" class="left" ></label>
+           <label for="slide022" class="right"></label>
+           <a><img src="./imgs/slide01.jpg"></a>
+        </div>
+       </li>
+       <li class="slideitem2">
+        <div>
+         <label for="slide011" class="left"></label>
+         <label for="slide033" class="right"></label>
+         <a><img src="./imgs/slide02.jpg"></a>
+        </div>
+          </li>
+          <li class="slideitem2">
+           <div>
+            <label for="slide022" class="left"></label>
+            <label for="slide044" class="right"></label>
+            <a><img src="./imgs/slide01.jpg"></a>
+         </div>
+        </li>
+        <li class="slideitem2">
+           <div>
+            <label for="slide033" class="left"></label>
+            <label for="slide011" class="right"></label>
+            <a><img src="./imgs/slide02.jpg"></a>
+         </div>
+          </li>
+         </ul>
+        </div>
+       </body>
